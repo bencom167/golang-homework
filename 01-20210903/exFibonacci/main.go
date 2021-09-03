@@ -10,17 +10,18 @@ func main() {
 
 	// Khai bao bien
 	var (
-		err       error
 		firstNum  float64
 		secondNum float64
 	)
 
 	firstNum = 1
-	secondNum = 2
+	secondNum = 1
 
-	bmi := returnNextNumberFibonacci(firstNum, secondNum)
+	target := 10
 
-	fmt.Print("Your BMI index is ", bmi)
+	number := returnNextNumberFibonacci(firstNum, secondNum)
+
+	fmt.Print("So Fibonacci thu ", target, " : ", number)
 }
 
 /*

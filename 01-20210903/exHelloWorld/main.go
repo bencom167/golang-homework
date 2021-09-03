@@ -18,12 +18,11 @@ func main() {
 	// Say("Hi my Friends")
 
 	// Doc tu man hinh
-	/*
-		reader := bufio.NewReader(os.Stdin)
-		fmt.Print("Enter your name:")
-		yourname, _ := reader.ReadString('\n')
-		fmt.Print("Your name is " + yourname)
-	*/
+
+	reader := bufio.NewReader(os.Stdin)
+	fmt.Print("Enter your name:")
+	yourname, _ := reader.ReadString('\n')
+	fmt.Print("Your name is " + yourname)
 
 	// Khai bao bien
 	var (
