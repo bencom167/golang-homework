@@ -20,12 +20,11 @@ func main() {
 	var (
 		N      int64
 		primes []int64
-		count  int64
-		index  int64
+		index  int
 	)
 
 	// Tim cac so nguyen to nho hon 100,000
-	primes, count = findPrimeNumbers(2, 100000)
+	primes = findPrimeNumbers(100000)
 
 	// Nhap so nguyen duong N < 100,000
 	for {
@@ -37,7 +36,7 @@ func main() {
 	}
 
 	// Tim vi tri so nguyen to nho nhat > N
-	for index = 0; index < count; index++ {
+	for index = 0; index < len(primes); index++ {
 		if N < primes[index] {
 			break
 		}
@@ -49,21 +48,25 @@ func main() {
 }
 
 // Ham tim so nguyen to giua 2 so
-func findPrimeNumbers(min, max int64) (primes []int64, count int64) {
+func findPrimeNumbers(max int64) (primes []int64) {
 	// Kiem tra tham so dau vao
-	if min < 2 || max < 2 {
+	if max < 2 {
 		fmt.Println("So phai lon hon 2.")
-		return []int64{}, 0
-	}
-	if min > max {
-		fmt.Println("Nhap sai so khoang so.")
-		return []int64{}, 0
+		return []int64{}
 	}
 
-	// Lap tim kiem so nguyen to
+	// Push so nguyen to dau tien la 2
+	primes = append(primes, 2)
+	if max == 2 {
+		return primes
+	} // Tra lai luon mang co 01 phan tu la 2
+
+	var count int = 0
+	var min int64 = 3
+	// Lap tim kiem so nguyen to, bo qua so chan, chi kiem tra so le
 	for min <= max {
 		isPrime := true
-		for i := 2; i <= int(math.Sqrt(float64(min))); i++ {
+		for i := 3; i <= int(math.Sqrt(float64(min))); i++ { // Chi kiem tra so le nen bo chia 2
 			if min%int64(i) == 0 {
 				isPrime = false
 				break
@@ -73,10 +76,10 @@ func findPrimeNumbers(min, max int64) (primes []int64, count int64) {
 			primes = append(primes, min)
 			count++
 		}
-		min++
+		min += 2 // Chi kiem tra so le
 	}
 
-	return primes, count
+	return primes
 }
 
 // Ham do so nguyen tu ban phim
