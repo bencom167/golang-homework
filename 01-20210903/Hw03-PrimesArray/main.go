@@ -47,7 +47,7 @@ func main() {
 	fmt.Println(slide)
 }
 
-// Ham tim so nguyen to giua 2 so
+// Ham tim cac so nguyen to nho hon gia tri dau vao
 func findPrimeNumbers(max int64) (primes []int64) {
 	// Kiem tra tham so dau vao
 	if max < 2 {
