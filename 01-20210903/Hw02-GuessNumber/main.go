@@ -30,7 +30,7 @@ func main() {
 	r := rand.New(rand.NewSource(time.Now().UnixNano()))
 
 	// Sinh ngau nhien so nguyên dương X >= 0 và <= 100
-	X = int64(r.Int31n(100))
+	X = int64(r.Int63n(101))
 
 	for {
 		guessNum = readNumberFromKeyboard("Ban du doan so X la : ")

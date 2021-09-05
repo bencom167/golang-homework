@@ -21,11 +21,11 @@ func main() {
 		N      int64
 		primes []int64
 		count  int64
+		index  int64
 	)
 
-	// Tim so nguyen to nho hon 100,000
+	// Tim cac so nguyen to nho hon 100,000
 	primes, count = findPrimeNumbers(2, 100000)
-	fmt.Println(count)
 
 	// Nhap so nguyen duong N < 100,000
 	for {
@@ -36,14 +36,16 @@ func main() {
 		fmt.Println("  Nhap sai so nguyen duong N < 100000!")
 	}
 
-	// In day so nguyen to
-	for i := 0; i < int(count); i++ {
-		if N < primes[i] {
+	// Tim vi tri so nguyen to nho nhat > N
+	for index = 0; index < count; index++ {
+		if N < primes[index] {
 			break
 		}
-		fmt.Print(primes[i], " ")
 	}
-	fmt.Println("")
+
+	// In day so nguyen to <= N
+	var slide []int64 = primes[0:index]
+	fmt.Println(slide)
 }
 
 // Ham tim so nguyen to giua 2 so
@@ -73,6 +75,7 @@ func findPrimeNumbers(min, max int64) (primes []int64, count int64) {
 		}
 		min++
 	}
+
 	return primes, count
 }
 
