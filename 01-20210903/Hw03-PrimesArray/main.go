@@ -57,13 +57,9 @@ func findPrimeNumbers(max int64) (primes []int64) {
 
 	// Push so nguyen to dau tien la 2
 	primes = append(primes, 2)
-	if max == 2 {
-		return primes
-	} // Tra lai luon mang co 01 phan tu la 2
 
-	var count int = 0
+	// Lap tim kiem so nguyen to, bo qua so chan, chi kiem tra so le, bat dau tu so 3
 	var min int64 = 3
-	// Lap tim kiem so nguyen to, bo qua so chan, chi kiem tra so le
 	for min <= max {
 		isPrime := true
 		for i := 3; i <= int(math.Sqrt(float64(min))); i++ { // Chi kiem tra so le nen bo chia 2
@@ -74,7 +70,6 @@ func findPrimeNumbers(max int64) (primes []int64) {
 		}
 		if isPrime {
 			primes = append(primes, min)
-			count++
 		}
 		min += 2 // Chi kiem tra so le
 	}
