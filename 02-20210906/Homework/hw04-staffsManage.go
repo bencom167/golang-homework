@@ -39,16 +39,16 @@ func main() {
 	//printNiceFormat(staffs, "Danh sách gốc :")
 
 	// Sắp xếp theo tên/họ và in
-	printNiceFormat(sortByName(staffs), "Danh sach sap xep theo ten :")
+	printNiceFormat(sortByName(staffs), "Danh sách sắp xếp theo tên/họ :")
 
 	// Sắp xếp giảm dần theo lương
 	staffsSortBySalary := sortBySalary(staffs)
 
 	// In danh sách sau khi sắp xếp giảm dần theo lương
-	printNiceFormat(staffsSortBySalary, "Danh sach sap xep giam dan theo luong :")
+	printNiceFormat(staffsSortBySalary, "Danh sách sắp xếp giảm dần theo lương :")
 
-	// In danh sách nhân viên có mức lương lớn thứ 2, đầu vào là danh sách đã sắp xếp lương giảm dẩn
-	printNiceFormat(max2StaffsSalary(staffsSortBySalary), "Danh sach nhân viên có mức lương lớn thứ 2 :")
+	// In danh sách nhân viên có mức lương cao thứ nhì, đầu vào là danh sách đã sắp xếp lương giảm dẩn
+	printNiceFormat(max2StaffsSalary(staffsSortBySalary), "Danh sach nhân viên có mức lương cao thứ nhì :")
 
 }
 
@@ -87,6 +87,7 @@ func sortBySalary(staffs []Staff) []Staff {
 
 /*
 	Hàm lấy danh sách nhân viên có lương cao thứ 2
+	Input là danh sách nhân viên đã sắp xếp giảm dần theo lương
 */
 func max2StaffsSalary(staffs []Staff) []Staff {
 	max2Staffs := []Staff{} // Khởi tạo mảng rỗng
@@ -127,6 +128,6 @@ func printNiceFormat(staffs []Staff, msg string) {
 	fmt.Println("=========================")
 	fmt.Println(msg)
 	for i := 0; i < len(staffs); i++ {
-		fmt.Printf(" %v. \t%v %v \t%v \t%v\n", i+1, staffs[i].FirstName, staffs[i].LastName, staffs[i].SalaryRatio, staffs[i].BonusMoney)
+		fmt.Printf(" %v. \t%v %v \t%v \t%v\n", i+1, staffs[i].LastName, staffs[i].FirstName, staffs[i].SalaryRatio, staffs[i].BonusMoney)
 	}
 }
