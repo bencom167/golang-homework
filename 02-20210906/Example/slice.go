@@ -49,6 +49,7 @@ func removeItemSliceKeepOrder2(a []string, i int) []string {
 
 /*
 Đảo một slice. Chú ý khi truyền vào một mảng/slice là truyền by reference
+
 When a slice is passed to a function, even though it's passed by value,
 the pointer variable will refer to the same underlying array.
 Hence when a slice is passed to a function as parameter, changes made inside
@@ -69,6 +70,19 @@ func reverseKeepInput(a []string) (reversed []string) {
 		reversed = append(reversed, n)
 	}
 	return
+}
+
+/*
+Cách này cũng được nhưng code dài dòng. Phong cách của Golang là phải ngắn gọn, chạy nhanh
+tốn ít bộ nhớ. Mọi sự dài dòng đều quy ra tiền cả !
+*/
+func reverseKeepInput2(a []string) []string {
+	reversed := []string{}
+	for i := range a {
+		n := a[len(a)-1-i]
+		reversed = append(reversed, n)
+	}
+	return reversed
 }
 
 /*

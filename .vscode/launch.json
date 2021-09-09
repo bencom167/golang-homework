@@ -9,7 +9,7 @@
             "type": "go",
             "request": "launch",
             //"mode": "auto",
-            "mode": "debug",
+            "mode": "auto",
             "program": "${fileDirname}"
         }
     ]

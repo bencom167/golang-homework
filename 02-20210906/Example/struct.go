@@ -82,6 +82,7 @@ func demoStruct() {
 		if tom != nil {
 			fmt.Println(tom.FullName())
 		}
+
 		//Fluent API bản chất chỉ là cách viết nối tiếp các method mà thôi
 		jack := BuildPerson().WithFirstName("Jack").WithLastName("London").WithAge(12)
 		fmt.Println(jack)*/
