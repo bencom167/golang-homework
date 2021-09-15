@@ -1,6 +1,9 @@
 /*
 	Hãy lập trình ứng dụng tương tự như lệnh tree liệt kê cây thư mục. Chú ý trên mạng có nhiều gợi ý thuật toán.
 	Chỉ cần đọc, hiểu, áp dụng được vào ứng dụng Go là tốt nghiệp lớp cấu trúc dữ liệu giải thuật Golang rồi.
+
+	Code giải quyết được với các yêu cầu:
+		- Code chạy cho MacOS, Linux
 */
 
 package main
@@ -37,9 +40,10 @@ func main() {
 */
 func inputData() (string, int) {
 	// Thư mục cần duyệt
-	directory := "/Users/bendn/code/golang/02-20210906"
-	//directoryOrigin = "/Users/bendn/code/golang/"
-	//directoryOrigin = "/Users/bendn/code/"
+	//directory := "/Users/bendn/code/golang/02-20210906"
+	//directoryOrigin := "/Users/bendn/code/golang/"
+	//directoryOrigin := "/Users/bendn/code/"
+	directory := "."
 
 	depth := 3 // Độ sâu thư mục cần duyệt
 
