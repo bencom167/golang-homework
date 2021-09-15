@@ -18,7 +18,7 @@ type Staff struct {
 	BonusMoney  float64 // Trợ cấp
 }
 
-func main() {
+func hw04StaffsManage() {
 	//staffs := []Staff{}
 	//staffs := []Staff{{"Toan", "Vo", 3.0, 4500000}}
 	//staffs := []Staff{{"Toan", "Vo", 3.0, 4500000}, {"Quan", "Dang", 3.0, 4500000}}

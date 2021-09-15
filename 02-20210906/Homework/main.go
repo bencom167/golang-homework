@@ -1,20 +1,24 @@
-/*
-	Bài 3 Viết function remove những phần tử bị trùng nhau trong mảng
-	Ví dụ: removeDuplicates([1,2,5,2,6,2,5]) => [1,2,5,6]
-*/
-
 package main
 
 import (
-	"fmt"
 	"math/rand"
 	"time"
 )
 
 func main() {
-	// Testcase mảng số sinh ngẫu nhiên (30 phần tử, 0 <= giá trị <= 100)
-	numArray := randomIntArray(8, 10)
-	fmt.Println(numArray)
+	// Chạy tương ứng bài 1,2,3,4
+	hw := 4
+
+	switch {
+	case hw == 1:
+		hw01Max2Numbers()
+	case hw == 2:
+		hw02FindMaxLengthElement()
+	case hw == 3:
+		hw03RemoveDuplicates()
+	default:
+		hw04StaffsManage()
+	}
 }
 
 /*

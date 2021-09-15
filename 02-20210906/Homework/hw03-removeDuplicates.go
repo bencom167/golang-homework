@@ -7,11 +7,9 @@ package main
 
 import (
 	"fmt"
-	"math/rand"
-	"time"
 )
 
-func main() {
+func hw03RemoveDuplicates() {
 	//numArr := []int{}
 	//numArr := []int{1}
 	//numArr := []int{1, 1}
@@ -51,20 +49,4 @@ func removeDuplicates(numArr []int) []int {
 func removeItemSliceNotKeepOrder(numArr []int, index int) []int {
 	numArr[index] = numArr[len(numArr)-1] // Gán phần tử cuối cùng vào ô cần xoá
 	return numArr[:len(numArr)-1]         // Cắt bớt phần tử cuối của mảng
-}
-
-/*
-	Hàm sinh mảng số nguyên không âm ngẫu nhiên, count phần từ, giá trị phần tử <= max
-*/
-func randomIntArray(max int, count int) []int {
-	var numArray []int
-
-	// Khoi tao bien sinh ngau nhien.
-	rand.Seed(time.Now().UnixNano())
-
-	// Sinh ngau nhien so nguyên không âm <= max, bổ sung vào mảng
-	for i := 0; i < count; i++ {
-		numArray = append(numArray, int(rand.Intn(max)))
-	}
-	return numArray
 }

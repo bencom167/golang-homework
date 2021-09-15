@@ -11,7 +11,7 @@ import (
 	"time"
 )
 
-func main() {
+func hw02FindMaxLengthElement() {
 	//stringArray := []string{} // Mảng rỗng
 	//stringArray := []string{"aba"} // Mảng có 1 phần tử
 	//stringArray := []string{"aba", "aa", "ad", "c", "vcd", "dfgd"}

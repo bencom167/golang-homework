@@ -11,11 +11,9 @@ package main
 
 import (
 	"fmt"
-	"math/rand"
-	"time"
 )
 
-func main() {
+func hw01Max2Numbers() {
 	//numArray := []int{} // Testcase mảng rỗng
 	//numArray := []int{10} // Testcase mảng 1 phần tử
 	//numArray := []int{2, 1, 3, 4}
@@ -67,20 +65,4 @@ func max2Numbers(numArray []int) int {
 	}
 
 	return max2
-}
-
-/*
-	Hàm sinh mảng số nguyên không âm ngẫu nhiên, count phần từ, giá trị phần tử <= max
-*/
-func randomIntArray(max int, count int) []int {
-	var numArray []int
-
-	// Khoi tao bien sinh ngau nhien.
-	rand.Seed(time.Now().UnixNano())
-
-	// Sinh ngau nhien so nguyên không âm <= max, bổ sung vào mảng
-	for i := 0; i < count; i++ {
-		numArray = append(numArray, int(rand.Intn(max)))
-	}
-	return numArray
 }
