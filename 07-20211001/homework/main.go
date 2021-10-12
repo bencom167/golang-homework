@@ -1,7 +1,7 @@
 package main
 
 import (
-	"web/repo"
+	"homework/repo"
 )
 
 func main() {
