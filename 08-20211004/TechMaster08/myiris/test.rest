@@ -1,0 +1,9 @@
+GET http://localhost:8080/hello HTTP/1.1
+
+###
+
+POST  http://localhost:8080/book HTTP/1.1
+
+###
+
+GET http://localhost:8080/people HTTP/1.1

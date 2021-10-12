@@ -1,0 +1,13 @@
+GET http://localhost:3000/foo HTTP/1.1
+
+###
+
+GET http://localhost:3000/ HTTP/1.1
+
+###
+
+GET http://localhost:3000?name=book2&year=2020 HTTP/1.1
+
+###
+
+GET http://localhost:3000/xml HTTP/1.1
