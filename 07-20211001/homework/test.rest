@@ -10,7 +10,7 @@ POST http://localhost:8080/users?id=90001&fullname=Ben Dang&email=bendn@onemount
 GET http://localhost:8080/users/id?id=90001 HTTP/1.1
 
 ###
-PUT http://localhost:8080/users/id?id=90001&age=35 HTTP/1.1
+PUT http://localhost:8080/users/id?id=90001&age=34 HTTP/1.1
 
 ###
 DELETE http://localhost:8080/users/id?id=90001 HTTP/1.1
