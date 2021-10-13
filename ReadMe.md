@@ -1,15 +1,13 @@
-// Lệnh dùng để push code lên git
-
 git init    
 git add -A  
 git commit -m 'Description here'    
 git remote add origin git@github.com:bencom167/golang-learning.git  
 git push -u -f origin master
 
-Managing remote repositories
+# Managing remote repositories
 Learn to work with your local repositories on your computer and remote repositories hosted on GitHub.
 
-Adding a remote repository
+## Adding a remote repository
 To add a new remote, use the git remote add command on the terminal, in the directory your repository is stored at.
 
 The git remote add command takes two arguments:
@@ -19,10 +17,10 @@ A remote URL, for example, https://github.com/user/repo.git
 For example:
 
 $ git remote add origin https://github.com/user/repo.git
-# Set a new remote
+## Set a new remote
 
 $ git remote -v
-# Verify new remote
+## Verify new remote
 > origin  https://github.com/user/repo.git (fetch)
 > origin  https://github.com/user/repo.git (push)
 For more information on which URL to use, see "About remote repositories."
@@ -61,7 +59,7 @@ Change your remote's URL from SSH to HTTPS with the git remote set-url command.
 $ git remote set-url origin https://github.com/USERNAME/REPOSITORY.git
 Verify that the remote URL has changed.
 $ git remote -v
-# Verify new remote URL
+## Verify new remote URL
 > origin  https://github.com/USERNAME/REPOSITORY.git (fetch)
 > origin  https://github.com/USERNAME/REPOSITORY.git (push)
 The next time you git fetch, git pull, or git push to the remote repository, you'll be asked for your GitHub username and password. When Git prompts you for your password, enter your personal access token (PAT) instead. Password-based authentication for Git has been removed, and using a PAT is more secure. For more information, see "Creating a personal access token."
@@ -79,7 +77,7 @@ Change your remote's URL from HTTPS to SSH with the git remote set-url command.
 $ git remote set-url origin git@github.com:USERNAME/REPOSITORY.git
 Verify that the remote URL has changed.
 $ git remote -v
-# Verify new remote URL
+## Verify new remote URL
 > origin  git@github.com:USERNAME/REPOSITORY.git (fetch)
 > origin  git@github.com:USERNAME/REPOSITORY.git (push)
 Troubleshooting: No such remote '[name]'
@@ -100,15 +98,15 @@ Example
 These examples assume you're cloning using HTTPS, which is recommended.
 
 $ git remote -v
-# View existing remotes
+## View existing remotes
 > origin  https://github.com/OWNER/REPOSITORY.git (fetch)
 > origin  https://github.com/OWNER/REPOSITORY.git (push)
 
 $ git remote rename origin destination
-# Change remote name from 'origin' to 'destination'
+## Change remote name from 'origin' to 'destination'
 
 $ git remote -v
-# Verify remote's new name
+## Verify remote's new name
 > destination  https://github.com/OWNER/REPOSITORY.git (fetch)
 > destination  https://github.com/OWNER/REPOSITORY.git (push)
 Troubleshooting: Could not rename config section 'remote.[old name]' to 'remote.[new name]'
@@ -117,7 +115,7 @@ This error means that the remote you tried the old remote name you typed doesn't
 You can check which remotes currently exist with the git remote -v command:
 
 $ git remote -v
-# View existing remotes
+## View existing remotes
 > origin  https://github.com/OWNER/REPOSITORY.git (fetch)
 > origin  https://github.com/OWNER/REPOSITORY.git (push)
 Troubleshooting: Remote [new name] already exists
@@ -133,16 +131,16 @@ Example
 These examples assume you're cloning using HTTPS, which is recommended.
 
 $ git remote -v
-# View current remotes
+## View current remotes
 > origin  https://github.com/OWNER/REPOSITORY.git (fetch)
 > origin  https://github.com/OWNER/REPOSITORY.git (push)
 > destination  https://github.com/FORKER/REPOSITORY.git (fetch)
 > destination  https://github.com/FORKER/REPOSITORY.git (push)
 
 $ git remote rm destination
-# Remove remote
+## Remove remote
 $ git remote -v
-# Verify it's gone
+## Verify it's gone
 > origin  https://github.com/OWNER/REPOSITORY.git (fetch)
 > origin  https://github.com/OWNER/REPOSITORY.git (push)
 Note: git remote rm does not delete the remote repository from the server. It simply removes the remote and its references from your local repository.
