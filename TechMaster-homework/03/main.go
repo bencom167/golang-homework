@@ -4,6 +4,7 @@ import (
 	"fmt"
 	"hw03/calendar"
 	"hw03/docker"
+	"hw03/tree"
 )
 
 func main() {
@@ -23,6 +24,6 @@ func main() {
 	fmt.Println()
 
 	// Bài 3
-	//data := tree.PrintDirectoryTree(".")
-	//fmt.Println(data)
+	data := tree.PrintDirectoryTree(".")
+	fmt.Println(data)
 }
