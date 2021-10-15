@@ -2,11 +2,11 @@ module hw03
 
 go 1.17
 
-require github.com/docker/docker v20.10.8+incompatible
+require github.com/docker/docker v20.10.9+incompatible
 
 require (
 	github.com/Microsoft/go-winio v0.5.0 // indirect
-	github.com/containerd/containerd v1.5.5 // indirect
+	github.com/containerd/containerd v1.5.7 // indirect
 	github.com/docker/distribution v2.7.1+incompatible // indirect
 	github.com/docker/go-connections v0.4.0 // indirect
 	github.com/docker/go-units v0.4.0 // indirect
