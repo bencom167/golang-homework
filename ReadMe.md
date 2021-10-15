@@ -1,11 +1,18 @@
+# Basic command
+
 git init    
 git add -A  
 git commit -m 'Description here'    
-git remote add origin git@github.com:bencom167/golang-learning.git  
+git remote add origin git@github.com:[username]/[repo].git  
 git push -u -f origin master
 
+
 # Managing remote repositories
+
+(Source: https://docs.github.com/en/enterprise-server@3.1/get-started/getting-started-with-git/managing-remote-repositories)
+
 Learn to work with your local repositories on your computer and remote repositories hosted on GitHub.
+
 
 ## Adding a remote repository
 To add a new remote, use the git remote add command on the terminal, in the directory your repository is stored at.
