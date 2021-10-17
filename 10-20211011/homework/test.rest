@@ -7,7 +7,7 @@ GET http://localhost:8080/users?fullname=J&age=42 HTTP/1.1
 POST http://localhost:8080/users?id=90002&fullname=Ben Dang&email=bendn@onemount.com&phone=0987654321&age=35&sex=male HTTP/1.1
 
 ###
-GET http://localhost:8080/users/id?id=90001 HTTP/1.1
+GET http://localhost:8080/users/id?id=90002 HTTP/1.1
 
 ###
 PUT http://localhost:8080/users/id?id=90001&fullname=Ben Dang HTTP/1.1
