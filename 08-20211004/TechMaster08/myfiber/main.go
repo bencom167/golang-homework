@@ -20,6 +20,7 @@ func main() {
 	app.Get("/people", func(c *fiber.Ctx) error {
 		return c.JSON(repo.ListPeople())
 	})
+	
 
 	_ = app.Listen(":8080")
 }

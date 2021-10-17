@@ -1,0 +1,16 @@
+GET http://localhost:8080/users HTTP/1.1
+
+###
+GET http://localhost:8080/users?age=35&age=3i&sex=female HTTP/1.1
+
+###
+POST http://localhost:8080/users?id=90001&fullname=Ben Dang&email=bendn@onemount.com&phone=0987654321&age=35&sex=male HTTP/1.1
+
+###
+GET http://localhost:8080/users/id?id=90001 HTTP/1.1
+
+###
+PUT http://localhost:8080/users/id?id=90001&fullname=Ben Dang Ngoc HTTP/1.1
+
+###
+DELETE http://localhost:8080/users/id?id=90001 HTTP/1.1
