@@ -9,5 +9,4 @@ require (
 	github.com/go-pg/pg/v10 v10.10.6
 	github.com/goccy/go-json v0.7.10
 	github.com/gofiber/fiber/v2 v2.20.2
-	github.com/zeimedee/go-postgres v0.0.0-20210622135935-cc5834be70dd
 )
