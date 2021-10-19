@@ -1,8 +1,0 @@
-{
-    "database" : {
-        "addr" : "localhost:5433",
-        "user" : "postgres",
-        "password" : "123",
-        "database" : "postgres"
-    }
-}
